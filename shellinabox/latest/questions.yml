@@ -25,7 +25,7 @@ questions:
   description: "Username of user to create"
   type: string
   required: true
-  label: username
+  label: Username
   group: "PSiaBox Settings"
 - variable: password
   default: ""
