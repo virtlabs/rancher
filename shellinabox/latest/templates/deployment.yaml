@@ -14,16 +14,6 @@ spec:
         app: {{ template "psiabox.fullname" . }}
     spec:
       initContainers:
-      - name: "remove-lost-found"
-        image: "busybox:1.25.0"
-        imagePullPolicy: {{ .Values.imagePullPolicy | quote }}
-        command:  ["rm", "-fr", "/data"]
-        volumeMounts:
-        - name: data
-          mountPath: /data
-          {{- if .Values.persistence.subPath }}
-          subPath: {{ .Values.persistence.subPath }}
-          {{- end }}
       {{- if .Values.nodeSelector }}
       nodeSelector:
 {{ toYaml .Values.nodeSelector | indent 8 }}
