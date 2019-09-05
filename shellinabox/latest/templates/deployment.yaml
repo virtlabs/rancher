@@ -29,12 +29,12 @@ spec:
         resources:
 {{ toYaml .Values.resources | indent 10 }}
         env:
-        - name: SX_U
+        - name: SX_P
           valueFrom:
             secretKeyRef:
               name: {{ template "psiabox.fullname" . }}
               key: password
-        - name: SX_P
+        - name: SX_U
           value: {{ default "" .Values.username | quote }}
         ports:
         - name: http
