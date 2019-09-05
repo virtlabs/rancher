@@ -12,19 +12,6 @@ imagePullPolicy: IfNotPresent
 nodeSelector: {}
 tolerations: []
 
-livenessProbe:
-  initialDelaySeconds: 30
-  periodSeconds: 10
-  timeoutSeconds: 5
-  successThreshold: 1
-  failureThreshold: 3
-
-readinessProbe:
-  initialDelaySeconds: 5
-  periodSeconds: 10
-  timeoutSeconds: 1
-  successThreshold: 1
-  failureThreshold: 3
 
 ## Persist data to a persistent volume
 persistence:
