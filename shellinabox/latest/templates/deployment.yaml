@@ -48,7 +48,7 @@ spec:
         - name: username
           value: {{ default "" .Values.username | quote }}
         ports:
-        - name: psiabox
+        - name: http
           containerPort: 4200
         livenessProbe:
           exec:

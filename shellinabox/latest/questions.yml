@@ -53,29 +53,47 @@ questions:
     description: "If undefined or null, uses the default StorageClass. Defaults to null."
     type: storageclass
     label: Default storageClass
-- variable: service.port
-  default: "4200"
-  description: "Service port for access to psiabox"
-  type: string
-  label: PSiaBox NodePort number
-  required: true
-  group: "psiabox Settings"
-- variable: service.type
-  default: "ClusterIP"
-  description: "psiabox K8s Service type"
-  type: enum
+  - variable: ingress.enabled
+  default: true
+  description: "Expose app using Layer 7 Load Balancer - ingress"
+  type: boolean
+  label: Expose app using Layer 7 Load Balancer
+  show_subquestion_if: true
   group: "Services and Load Balancing"
+  subquestions:
+  - variable: ingress.hosts[0].name
+    default: "xip.io"
+    description: "Hostname to your psiabox installation"
+    type: hostname
+    required: true
+    label: Hostname
+- variable: service.type
+  default: "NodePort"
+  description: "WordPress Service type"
+  type: enum
+  show_if: "ingress.enabled=false"
   options:
     - "ClusterIP"
     - "NodePort"
+    - "LoadBalancer"
   required: true
-  label: PSiaBox Service Type
+  label: WordPress Service Type
   show_subquestion_if: "NodePort"
+  group: "Services and Load Balancing"
   subquestions:
-  - variable: service.nodePort
+  - variable: nodePorts.http
     default: ""
-    description: "NodePort port number(to set explicitly, choose port between 30000-32767)"
+    description: "NodePort http port(to set explicitly, choose port between 30000-32767)"
     type: int
     min: 30000
     max: 32767
-    label: Service NodePort number
+    show_if: "ingress.enabled=false&&service.type=NodePort"
+    label: NodePort Http Port
+  - variable: nodePorts.https
+    default: ""
+    description: "NodePort https port(to set explicitly, choose port between 30000-32767)"
+    type: int
+    min: 30000
+    max: 32767
+    show_if: "ingress.enabled=false&&service.type=NodePort"
+    label: NodePort Https Port
