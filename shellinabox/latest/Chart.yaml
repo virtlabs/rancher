@@ -1,0 +1,16 @@
+name: shellinabox
+version: 1.0.0
+appVersion: 1.0.0
+description: A shell in a browser with python 3.6.
+keywords:
+- python
+- bash
+- shell
+home: https://github.com/shellinabox/shellinabox
+sources:
+- https://github.com/shellinabox/shellinabox
+- https://github.com/virtlabs/vlabs/tree/master/marketplace/pyshellinabox
+maintainers:
+- name: sferretti
+  email: fakeemail@fake.fake
+
