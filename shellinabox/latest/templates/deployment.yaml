@@ -33,7 +33,7 @@ spec:
           valueFrom:
             secretKeyRef:
               name: {{ template "psiabox.fullname" . }}
-              key: password
+              key: SX_P
         - name: SX_U
           value: {{ default "" .Values.username | quote }}
         ports:
