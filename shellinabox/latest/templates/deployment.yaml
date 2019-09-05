@@ -44,7 +44,6 @@ spec:
             secretKeyRef:
               name: {{ template "psiabox.fullname" . }}
               key: password
-        {{- end }}
         - name: username
           value: {{ default "" .Values.username | quote }}
         ports:
