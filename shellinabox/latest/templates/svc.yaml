@@ -19,5 +19,4 @@ spec:
       {{- if (and (eq .Values.service.type "NodePort") (not (empty .Values.nodePorts.http)))}}
       nodePort: {{ .Values.nodePorts.http }}
       {{- end }}
-  selector:
     app: {{ template "psiabox.fullname" . }}
