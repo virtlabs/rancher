@@ -34,5 +34,5 @@ spec:
         - name: SX_U
           value: {{ default "" .Values.username | quote }}
         ports:
-        - name: http
+        - name: httpcontainer
           containerPort: 4200
