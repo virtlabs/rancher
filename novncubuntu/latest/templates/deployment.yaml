@@ -32,5 +32,5 @@ spec:
         - name: VNC_PW
           value: {{ default "" .Values.password | quote }}
         ports:
-        - name: http
+        - name: httpnv
           containerPort: 6901
