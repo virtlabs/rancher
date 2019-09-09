@@ -16,7 +16,4 @@ spec:
     - name: http
       port: 80
       targetPort: http
-      {{- if (and (eq .Values.service.type "NodePort") (not (empty .Values.nodePorts.http)))}}
-      nodePort: {{ .Values.nodePorts.http }}
-      {{- end }}
     app: {{ template "psiabox.fullname" . }}
