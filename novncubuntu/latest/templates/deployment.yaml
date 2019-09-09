@@ -33,4 +33,4 @@ spec:
           value: {{ default "" .Values.password | quote }}
         ports:
         - name: http
-          containerPort: 4200
+          containerPort: 6901
