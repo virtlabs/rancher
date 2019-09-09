@@ -1,0 +1,72 @@
+categories:
+- Database
+- MySQL
+questions:
+- variable: defaultImage
+  default: "true"
+  description: "Use default Docker images"
+  label: Use Default Images
+  type: boolean
+  show_subquestion_if: false
+  group: "Container Images"
+  subquestions:
+  - variable: image
+    default: "virtuallabs/novncubuntu"
+    description: "Docker image name"
+    type: string
+    label: Image Name
+  - variable: imageTag
+    default: "latest"
+    description: "Docker image tag"
+    type: string
+    label: Image Tag
+- variable: password
+  default: ""
+  description: "vnc Password for the new user"
+  type: password
+  label: Password
+  group: "novnc Settings"
+- variable: ingress.enabled
+  default: true
+  description: "Expose app using Layer 7 Load Balancer - ingress"
+  type: boolean
+  label: Expose app using Layer 7 Load Balancer
+  show_subquestion_if: true
+  group: "Services and Load Balancing"
+  subquestions:
+  - variable: ingress.hosts[0].name
+    default: "xip.io"
+    description: "Hostname to your ubuntu installation"
+    type: hostname
+    required: true
+    label: Hostname
+- variable: service.type
+  default: "NodePort"
+  description: "WordPress Service type"
+  type: enum
+  show_if: "ingress.enabled=false"
+  options:
+    - "ClusterIP"
+    - "NodePort"
+    - "LoadBalancer"
+  required: true
+  label: WordPress Service Type
+  show_subquestion_if: "NodePort"
+  group: "Services and Load Balancing"
+  subquestions:
+  - variable: nodePorts.http
+    default: ""
+    description: "NodePort http port(to set explicitly, choose port between 30000-32767)"
+    type: int
+    min: 30000
+    max: 32767
+    show_if: "ingress.enabled=false&&service.type=NodePort"
+    label: NodePort Http Port
+  - variable: nodePorts.https
+    default: ""
+    description: "NodePort https port(to set explicitly, choose port between 30000-32767)"
+    type: int
+    min: 30000
+    max: 32767
+    show_if: "ingress.enabled=false&&service.type=NodePort"
+    label: NodePort Https Port
