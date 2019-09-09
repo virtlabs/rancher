@@ -1,4 +1,4 @@
-# Shell in a box - Python
+# NOVNC Ububntu
 
 loremipsumsicamet
 
