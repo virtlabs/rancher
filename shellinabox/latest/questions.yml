@@ -47,33 +47,3 @@ questions:
     type: hostname
     required: true
     label: Hostname
-- variable: service.type
-  default: "NodePort"
-  description: "WordPress Service type"
-  type: enum
-  show_if: "ingress.enabled=false"
-  options:
-    - "ClusterIP"
-    - "NodePort"
-    - "LoadBalancer"
-  required: true
-  label: WordPress Service Type
-  show_subquestion_if: "NodePort"
-  group: "Services and Load Balancing"
-  subquestions:
-  - variable: nodePorts.http
-    default: ""
-    description: "NodePort http port(to set explicitly, choose port between 30000-32767)"
-    type: int
-    min: 30000
-    max: 32767
-    show_if: "ingress.enabled=false&&service.type=NodePort"
-    label: NodePort Http Port
-  - variable: nodePorts.https
-    default: ""
-    description: "NodePort https port(to set explicitly, choose port between 30000-32767)"
-    type: int
-    min: 30000
-    max: 32767
-    show_if: "ingress.enabled=false&&service.type=NodePort"
-    label: NodePort Https Port
