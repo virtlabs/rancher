@@ -1,0 +1,41 @@
+categories:
+- Data analysis
+questions:
+- variable: defaultImage
+  default: "true"
+  description: "Use default Docker images"
+  label: Use Default Images
+  type: boolean
+  show_subquestion_if: false
+  group: "Container Images"
+  subquestions:
+  - variable: image
+    default: "virtuallabs/novnconlyroot"
+    description: "Docker image name"
+    type: string
+    label: Image Name
+  - variable: imageTag
+    default: "latest"
+    description: "Docker image tag"
+    type: string
+    label: Image Tag
+- variable: password
+  default: ""
+  description: "vnc password for the new user"
+  type: password
+  label: Password
+  group: "novnc Settings"
+- variable: ingress.enabled
+  default: true
+  description: "Expose app using Layer 7 Load Balancer - ingress"
+  type: boolean
+  label: Expose app using Layer 7 Load Balancer
+  show_subquestion_if: true
+  group: "Services and Load Balancing"
+  subquestions:
+  - variable: ingress.hosts[0].name
+    default: "xip.io"
+    description: "Hostname to your ubuntu installation"
+    type: hostname
+    required: true
+    label: Hostname

@@ -1,0 +1,17 @@
+name: geant4-root-virtual-desk
+version: 1.0.0
+appVersion: 1.0.0
+description: Virtual desktop with CERN Root framework and Geant4 installed
+keywords:
+- ubuntu
+- geant4
+- cern
+- root
+home: https://github.com/virtlabs/vlabs/tree/master/marketplace/geant4
+icon: https://geant4.web.cern.ch/sites/geant4.web.cern.ch/files/g4logo-full-bigtxt.png
+sources:
+- https://github.com/virtlabs/vlabs/tree/master/marketplace/geant4
+maintainers:
+- name: sferretti
+  email: fakeemail@fake.fake
+
