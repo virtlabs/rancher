@@ -1,4 +1,4 @@
-## Example Page
+## Ubuntu virtual dekstop
 
-##No Vnc
+Launch a ubuntu desktop exposed via noVnc web interface
 
