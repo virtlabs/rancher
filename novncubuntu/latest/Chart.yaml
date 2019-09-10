@@ -1,7 +1,7 @@
-name: novncubuntu
+name: Ubuntu virtual desktop
 version: 1.0.0
 appVersion: 1.0.0
-description: Novnc Ubuntu
+description: Ubuntu 16.04 remote desktop with minimal packages installed
 keywords:
 - ubuntu
 - novnc
