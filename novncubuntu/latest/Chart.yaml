@@ -1,4 +1,4 @@
-name: Ubuntu virtual desktop
+name: UbuntuVirtualDeskt
 version: 1.0.0
 appVersion: 1.0.0
 description: Ubuntu 16.04 remote desktop with minimal packages installed
