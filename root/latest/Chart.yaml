@@ -1,0 +1,16 @@
+name: root-virtual-desk
+version: 1.0.0
+appVersion: 1.0.0
+description: Virtual desktop with CERN Root framework
+keywords:
+- ubuntu
+- cern
+- root
+home: https://github.com/virtlabs/vlabs/tree/master/marketplace/root
+icon: https://root.cern.ch/img/logos/ROOT_Logo/misc/generic-logo-black-plustext-512.png
+sources:
+- https://github.com/virtlabs/vlabs/tree/master/marketplace/root
+maintainers:
+- name: sferretti
+  email: fakeemail@fake.fake
+

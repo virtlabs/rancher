@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ template "novnc.fullname" . }}
+  labels:
+    app: {{ template "novnc.fullname" . }}
+    chart: "{{ .Chart.Name }}-{{ .Chart.Version }}"
+    release: "{{ .Release.Name }}"
+    heritage: "{{ .Release.Service }}"
+spec:
+  type: {{ .Values.service.type }}
+  {{- if (eq .Values.service.type "LoadBalancer") }}
+  externalTrafficPolicy: {{ .Values.serviceExternalTrafficPolicy | quote }}
+  {{- end }}
+  ports:
+    - name: http
+      port: 80
+      targetPort: httpnv
+  selector:
+    app: {{ template "novnc.fullname" . }}
