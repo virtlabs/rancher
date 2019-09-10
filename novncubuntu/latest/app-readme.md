@@ -1,7 +1,3 @@
-# NOVNC Ububntu
+# Ubuntu virtual desktop
 
-loremipsumsicamet
-
-## Introduction
-
-loremipsumsicamet
+Remote virtual desktop with ubuntu 18.04
