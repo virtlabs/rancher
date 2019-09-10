@@ -10,7 +10,7 @@ questions:
   group: "Container Images"
   subquestions:
   - variable: image
-    default: "virtuallabs/"novnconlyroot"
+    default: "virtuallabs/novnconlyroot"
     description: "Docker image name"
     type: string
     label: Image Name
