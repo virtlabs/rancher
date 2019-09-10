@@ -1,5 +1,5 @@
 image: "virtuallabs/novnconlyroot"
-imageTag: "latest"
+imageTag: "02032018"
 
 
 imagePullPolicy: IfNotPresent

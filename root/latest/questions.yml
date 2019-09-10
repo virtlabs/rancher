@@ -15,7 +15,7 @@ questions:
     type: string
     label: Image Name
   - variable: imageTag
-    default: "latest"
+    default: "02032018"
     description: "Docker image tag"
     type: string
     label: Image Tag
