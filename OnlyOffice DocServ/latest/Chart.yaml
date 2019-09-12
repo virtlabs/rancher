@@ -5,10 +5,10 @@ description: Only Office Document Server
 keywords:
 - Only Office
 - Document Server
-home: https://hub.docker.com/r/onlyoffice/documentserver
+home: https://github.com/ONLYOFFICE/DocumentServer
 icon: https://upload.wikimedia.org/wikipedia/commons/d/d9/Logo_light_tl.png
 sources:
-- https://hub.docker.com/r/onlyoffice/documentserver
+- https://github.com/ONLYOFFICE/DocumentServer
 maintainers:
 - name: sferretti
   email: fakeemail@fake.fake
