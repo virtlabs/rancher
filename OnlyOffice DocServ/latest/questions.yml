@@ -1,0 +1,48 @@
+categories:
+- DocumentServer
+questions:
+- variable: defaultImage
+  default: "true"
+  description: "Use default Docker images"
+  label: Use Default Images
+  type: boolean
+  show_subquestion_if: false
+  group: "Container Images"
+  subquestions:
+  - variable: image
+    default: "onlyoffice/documentserver"
+    description: "Docker image name"
+    type: string
+    label: Image Name
+  - variable: imageTag
+    default: "latest"
+    description: "Docker image tag"
+    type: string
+    label: Image Tag
+- variable: username
+  default: "admin"
+  description: "Username of user to create"
+  type: string
+  required: true
+  label: Username
+  group: "PSiaBox Settings"
+- variable: password
+  default: "default"
+  description: "OnlyOffice useless password"
+  type: password
+  label: Password
+  group: "OnlyOffice useless Settings"
+- variable: ingress.enabled
+  default: true
+  description: "Expose app using Layer 7 Load Balancer - ingress"
+  type: boolean
+  label: Expose app using Layer 7 Load Balancer
+  show_subquestion_if: true
+  group: "Services and Load Balancing"
+  subquestions:
+  - variable: ingress.hosts[0].name
+    default: "xip.io"
+    description: "Hostname to your psiabox installation"
+    type: hostname
+    required: true
+    label: Hostname

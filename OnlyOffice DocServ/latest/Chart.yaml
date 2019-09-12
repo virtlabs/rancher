@@ -1,0 +1,15 @@
+name: Only Office Document Server
+version: 5.4.0.21
+appVersion: 5.4.0.21
+description: Only Office Document Server
+keywords:
+- Only Office
+- Document Server
+home: https://hub.docker.com/r/onlyoffice/documentserver
+icon: https://en.wikipedia.org/wiki/OnlyOffice#/media/File:Logo_light_tl.png
+sources:
+- https://hub.docker.com/r/onlyoffice/documentserver
+maintainers:
+- name: sferretti
+  email: fakeemail@fake.fake
+
