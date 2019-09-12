@@ -41,13 +41,13 @@ configurationFiles:
 
 ## Configure the service
 ## ref: http://kubernetes.io/docs/user-guide/services/
-#service:
+service:
   ## Specify a service type
   ## ref: https://kubernetes.io/docs/concepts/services-networking/service/#publishing-services---service-types
-#  type: LoadBalancer
-#  nodePorts:
-#    http: ""
-#    https: ""
+  type: LoadBalancer
+  nodePorts:
+    http: ""
+    https: ""
   # nodePort: 32000
 
 serviceExternalTrafficPolicy: Cluster
