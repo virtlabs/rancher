@@ -19,19 +19,6 @@ questions:
     description: "Docker image tag"
     type: string
     label: Image Tag
-- variable: username
-  default: "admin"
-  description: "Username of user to create"
-  type: string
-  required: true
-  label: Username
-  group: "PSiaBox Settings"
-- variable: password
-  default: "default"
-  description: "OnlyOffice useless password"
-  type: password
-  label: Password
-  group: "OnlyOffice useless Settings"
 - variable: ingress.enabled
   default: true
   description: "Expose app using Layer 7 Load Balancer - ingress"

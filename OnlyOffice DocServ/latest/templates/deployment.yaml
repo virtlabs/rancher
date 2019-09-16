@@ -28,11 +28,6 @@ spec:
         imagePullPolicy: {{ .Values.imagePullPolicy | quote }}
         resources:
 {{ toYaml .Values.resources | indent 10 }}
-        env:
-        - name: SX_P
-          value: {{ default "" .Values.password | quote }}
-        - name: SX_U
-          value: {{ default "" .Values.username | quote }}
         ports:
         - name: httpcontainer
           containerPort: 80
