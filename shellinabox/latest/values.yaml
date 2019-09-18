@@ -52,5 +52,5 @@ service:
     http: ""
     https: ""
   # nodePort: 32000
-serviceExternalTrafficPolicy: Local
+serviceExternalTrafficPolicy: Cluster
 

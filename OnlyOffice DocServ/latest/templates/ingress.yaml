@@ -25,6 +25,12 @@ spec:
           backend:
             serviceName: {{ template "onlydoc.fullname" $ }}
             servicePort: httpscontainer
+    http:
+      paths:
+        - path: {{ default "" .path }}
+          backend:
+            serviceName: {{ template "onlydoc.fullname" $ }}
+            servicePort: httpcontainer
 ---
 {{- end }}
 {{- end }}
