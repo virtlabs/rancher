@@ -19,12 +19,12 @@ metadata:
 spec:
   rules:
   - host: {{ .name }}
-    http:
+    https:
       paths:
         - path: {{ default "" .path }}
           backend:
             serviceName: {{ template "onlydoc.fullname" $ }}
-            servicePort: httpcontainer
+            servicePort: httpscontainer
 ---
 {{- end }}
 {{- end }}

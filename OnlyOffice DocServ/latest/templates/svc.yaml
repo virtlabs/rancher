@@ -13,8 +13,8 @@ spec:
   externalTrafficPolicy: {{ .Values.serviceExternalTrafficPolicy | quote }}
   {{- end }}
   ports:
-    - name: http
-      port: 80
-      targetPort: httpcontainer
+    - name: https
+      port: 443
+      targetPort: httpscontainer
   selector:
     app: {{ template "onlydoc.fullname" . }}

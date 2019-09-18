@@ -29,5 +29,5 @@ spec:
         resources:
 {{ toYaml .Values.resources | indent 10 }}
         ports:
-        - name: httpcontainer
-          containerPort: 80
+        - name: httpscontainer
+          containerPort: 443
