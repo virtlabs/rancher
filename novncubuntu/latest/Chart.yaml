@@ -9,8 +9,8 @@ keywords:
 home: https://github.com/virtlabs/vlabs/tree/master/marketplace/novncubuntu
 icon: https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Former_Ubuntu_logo.svg/1280px-Former_Ubuntu_logo.svg.png
 sources:
-- https://github.com/virtlabs/vlabs/tree/master/marketplace/novncubuntu
+- https://github.com/bmbmikeg/vlabs/tree/master/marketplace/novncubuntu
 maintainers:
-- name: sferretti
+- name: bmbmikeg
   email: fakeemail@fake.fake
 
