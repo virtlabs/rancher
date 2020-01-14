@@ -16,7 +16,7 @@ spec:
     - name: http
       port: 80
       targetPort: httpnv
-    - name: vncFwd
+    - name: vncfwd
       port: 81
       targetPort: vnc
   selector:
