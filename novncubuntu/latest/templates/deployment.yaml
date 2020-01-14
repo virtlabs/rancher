@@ -39,3 +39,5 @@ spec:
           containerPort: 6901
         - name: vnc
           containerPort: 5901
+        - name: ssh
+          containerPort: 22
