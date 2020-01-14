@@ -12,7 +12,6 @@ imagePullPolicy: Always
 nodeSelector: {}
 tolerations: []
 
-
 ## Persist data to a persistent volume
 persistence:
   enabled: false
