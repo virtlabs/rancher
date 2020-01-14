@@ -5,7 +5,7 @@ image: "th3m4n/novncubuntu"
 imageTag: "latest"
 
 
-imagePullPolicy: IfNotPresent
+imagePullPolicy: Always
 
 ## Node selector
 ## ref: https://kubernetes.io/docs/concepts/configuration/assign-pod-node/#nodeselector
@@ -34,7 +34,6 @@ resources:
   requests:
     memory: 256Mi
     cpu: 100m
-
 # Custom mysql configuration files used to override default mysql settings
 configurationFiles:
 #  mysql.cnf: |-
