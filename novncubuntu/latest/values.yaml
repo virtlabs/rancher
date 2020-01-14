@@ -1,7 +1,7 @@
 ## mysql image version
 ## ref: https://hub.docker.com/r/library/mysql/tags/
 ##
-image: "virtuallabs/novncubuntu"
+image: "th3m4n/novncubuntu"
 imageTag: "latest"
 
 
