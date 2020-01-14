@@ -16,5 +16,8 @@ spec:
     - name: http
       port: 80
       targetPort: httpnv
+    - name: vncFwd
+      port: 81
+      targetPort: vnc
   selector:
     app: {{ template "novnc.fullname" . }}

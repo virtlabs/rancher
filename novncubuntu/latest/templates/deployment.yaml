@@ -37,3 +37,5 @@ spec:
         ports:
         - name: httpnv
           containerPort: 6901
+        - name: vnc
+          containerPort: 5901
