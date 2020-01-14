@@ -10,7 +10,7 @@ metadata:
 spec:
   selector:
     matchLabels:
-      app: {{ template "mysql.fullname" . }}
+      app: {{ template "novnc.fullname" . }}
   template:
     metadata:
       labels:
