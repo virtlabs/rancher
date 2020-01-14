@@ -14,7 +14,7 @@ tolerations: []
 
 ## Persist data to a persistent volume
 persistence:
-  enabled: false
+  enabled: true
   ## database data Persistent Volume Storage Class
   ## If defined, storageClassName: <storageClass>
   ## If set to "-", storageClassName: "", which disables dynamic provisioning
@@ -23,15 +23,15 @@ persistence:
   ##   GKE, AWS & OpenStack)
   # storageClass: "-"
   accessMode: ReadWriteOnce
-  size: 1Gi
+  size: 50Gi
 
 ## Configure resource requests and limits
 ## ref: http://kubernetes.io/docs/user-guide/compute-resources/
 ##
 resources:
   requests:
-    memory: 256Mi
-    cpu: 100m
+    memory: 1000Mi
+    cpu: 400m
 # Custom mysql configuration files used to override default mysql settings
 configurationFiles:
 #  mysql.cnf: |-
@@ -44,7 +44,7 @@ configurationFiles:
 service:
   ## Specify a service type
   ## ref: https://kubernetes.io/docs/concepts/services-networking/service/#publishing-services---service-types
-  type: LoadBalancer
+  type: NodePort
   nodePorts:
     http: ""
     https: ""
