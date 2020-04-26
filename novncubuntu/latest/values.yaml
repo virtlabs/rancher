@@ -30,8 +30,8 @@ persistence:
 ##
 resources:
   requests:
-    memory: 1000Mi
-    cpu: 400m
+    memory: 10Gi
+    cpu: 4000m
 # Custom mysql configuration files used to override default mysql settings
 configurationFiles:
 #  mysql.cnf: |-
