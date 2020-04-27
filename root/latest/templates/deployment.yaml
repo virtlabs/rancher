@@ -41,3 +41,5 @@ spec:
           containerPort: 22
         - name: http
           containerPort: 80
+        - name: rvnc
+          containerPort: 5901

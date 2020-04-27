@@ -16,5 +16,13 @@ spec:
     - name: http
       port: 80
       targetPort: httpnv
+  ports:
+    - name: vnc
+      port: 5901
+      targetPort: rvnc
+  ports:
+    - name: rssh
+      port: 22
+      targetPort: ssh
   selector:
     app: {{ template "novnc.fullname" . }}
