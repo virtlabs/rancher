@@ -1,7 +1,7 @@
 name: ubuntu-virtual-desk
-version: 1.0.0
-appVersion: 1.0.0
-description: Ubuntu 16.04 remote desktop with minimal packages installed
+version: 1.1.3
+appVersion: 1.1.3
+description: Ubuntu 19.04 remote desktop with minimal packages installed
 keywords:
 - ubuntu
 - novnc
@@ -9,8 +9,9 @@ keywords:
 home: https://github.com/virtlabs/vlabs/tree/master/marketplace/novncubuntu
 icon: https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Former_Ubuntu_logo.svg/1280px-Former_Ubuntu_logo.svg.png
 sources:
-- https://github.com/virtlabs/vlabs/tree/master/marketplace/novncubuntu
+- https://github.com/bmbmikeg/vlabs/tree/master/marketplace/novncubuntu
 maintainers:
-- name: sferretti
+- name: bmbmikeg
   email: fakeemail@fake.fake
 
+apiVersion: v1

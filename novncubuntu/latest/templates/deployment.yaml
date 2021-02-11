@@ -1,4 +1,4 @@
-apiVersion: apps/v1beta1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: {{ template "novnc.fullname" . }}
@@ -8,6 +8,9 @@ metadata:
     release: "{{ .Release.Name }}"
     heritage: "{{ .Release.Service }}"
 spec:
+  selector:
+    matchLabels:
+      app: {{ template "novnc.fullname" . }}
   template:
     metadata:
       labels:
@@ -34,3 +37,7 @@ spec:
         ports:
         - name: httpnv
           containerPort: 6901
+        - name: vnc
+          containerPort: 5901
+        - name: ssh
+          containerPort: 22

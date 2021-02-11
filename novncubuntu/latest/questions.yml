@@ -11,7 +11,7 @@ questions:
   group: "Container Images"
   subquestions:
   - variable: image
-    default: "virtuallabs/novncubuntu"
+    default: "th3m4n/novncubuntu"
     description: "Docker image name"
     type: string
     label: Image Name
